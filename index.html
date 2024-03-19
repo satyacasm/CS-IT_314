@@ -1,0 +1,1233 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>CS364_2024: LAB test</title>
+    <link rel="shortcut icon" href="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/theme/1703149491/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, CS364_2024: LAB test" />
+<link rel="stylesheet" type="text/css" href="https://betamoodle.iiitvadodara.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://betamoodle.iiitvadodara.ac.in/theme/styles.php/classic/1703149491_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/betamoodle.iiitvadodara.ac.in","sesskey":"KTTu9PHnPU","sessiontimeout":"28800","themerev":"1703149491","slasharguments":1,"theme":"classic","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1703149491","admin":"admin","svgicons":true,"usertimezone":"Asia\/Kolkata","contextid":28650,"langrev":1703149491,"templaterev":"1703149491"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?m\/1703149491\/","combine":true,"comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","ext":false,"root":"m\/1703149491\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_gps-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1703149491\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/javascript.php\/1703149491\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/javascript.php\/1703149491\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-quiz-view" class="format-topics  path-mod path-mod-quiz chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam betamoodle-iiitvadodara-ac-in pagelayout-incourse course-515 context-28650 cmid-4421 category-84 ">
+
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/polyfills/polyfill.js"></script>
+<script src="https://betamoodle.iiitvadodara.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar navbar-bootswatch navbar-expand moodle-has-zindex">
+    
+            <a href="https://betamoodle.iiitvadodara.ac.in" class="navbar-brand aalink 
+                    d-none d-sm-inline
+                    ">
+                <span class="site-name d-none d-md-inline">MOODLE.IIITV.AC.IN</span>
+            </a>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="d-none d-lg-block">
+                    
+                </li>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                    <div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data-userid="1590"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-65f9d73bcb85b65f9d73bca18624"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread notifications">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-65f9d73bcb85b65f9d73bca18624"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Mark all as read"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </a>
+        <a href="https://betamoodle.iiitvadodara.ac.in/message/notificationpreferences.php?userid=1590"
+           title="Notification preferences"
+           aria-label="Notification preferences">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://betamoodle.iiitvadodara.ac.in/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!-- user_menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class="usermenu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-0-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="User menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
+                            
+                            <span class="userbutton"><span class="usertext mr-1">SATYAM TRIPATHI</span><span class="avatars"><span class="avatar current"><img src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/core/1703149491/u/f2" class="userpicture defaultuserpic" width="35" height="35" aria-hidden="true" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/user/profile.php?id=1590" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Profile
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Grades
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Messages
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/user/preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferences
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/login/logout.php?sesskey=KTTu9PHnPU" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Log out
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+    <div id="page" class="container-fluid d-print-block">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card ">
+            <div class="card-body ">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-headings"><h1> Introduction to Cryptography and Network Security Laboratory_CS364_2024</h1></div></div>
+                    </div>
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav aria-label="Navigation bar">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/my/"  >Dashboard</a>
+                </li>
+        
+                <li class="breadcrumb-item">My courses</li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515"  title=" Introduction to Cryptography and Network Security Laboratory_CS364_2024">CS364_2024</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-0"  >General</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/view.php?id=4421" aria-current="page" title="Quiz">LAB test</a>
+                </li>
+        </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row  blocks-pre   d-print-block">
+            <div id="region-main-box" class="region-main">
+                <section id="region-main" class="region-main-content" aria-label="Content">
+                    <span class="notifications" id="user-notifications"></span>
+                    <div role="main"><span id="maincontent"></span><h2>LAB test</h2><div id="intro" class="box py-3 generalbox"><div class="no-overflow"><p dir="ltr" style="text-align: left;">Free navigation is not allowed.</p></div></div><div class="box py-3 quizinfo"><p>Attempts allowed: 1</p>
+<p>This quiz closed on Friday, 1 March 2024, 11:56 AM</p>
+<p>Time limit: 20 mins</p>
+</div><h3>Summary of your previous attempts</h3><table class="generaltable quizattemptsummary">
+<thead>
+<tr>
+<th class="header c0" style="text-align:left;" scope="col">State</th>
+<th class="header c1" style="text-align:center;" scope="col">Grade / 9.00</th>
+<th class="header c2 lastcol" style="text-align:center;" scope="col">Review</th>
+</tr>
+</thead>
+<tbody><tr class="lastrow">
+<td class="cell c0" style="text-align:left;">Finished<span class="statedetails">Submitted Friday, 1 March 2024, 11:53 AM</span></td>
+<td class="cell c1" style="text-align:center;">6.00</td>
+<td class="cell c2 lastcol" style="text-align:center;"><a title="Review your responses to this attempt" href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/review.php?attempt=154465&amp;cmid=4421">Review</a></td>
+</tr>
+</tbody>
+</table>
+<div id="feedback" class="box py-3 generalbox"><h3>Your final grade for this quiz is 6.00/9.00.</h3></div><div class="box py-3 quizattempt"><p>No more attempts are allowed</p>
+<div class="continuebutton">
+    <form method="get" action="https://betamoodle.iiitvadodara.ac.in/course/view.php" >
+            <input type="hidden" name="id" value="515">
+        <button type="submit" class="btn btn-secondary"
+            id="single_button65f9d73bca18634"
+            title=""
+            
+            >Back to the course</button>
+    </form>
+</div></div></div>
+                    <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=4409&forceview=1" id="prev-activity-link" class="btn btn-link"  title="Announcements" >&#x25C4; Announcements</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://betamoodle.iiitvadodara.ac.in/course/jumpto.php" class="form-inline" id="url_select_f65f9d73bca18633">
+        <input type="hidden" name="sesskey" value="KTTu9PHnPU">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=4409&amp;forceview=1" >Announcements</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Go">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+            
+        </div>
+</div>
+</div>
+</div>
+                    
+                </section>
+            </div>
+            <div class="columnleft blockcolumn  has-blocks ">
+                <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip Navigation</a>
+
+<section id="inst2144"
+     class=" block_navigation block  card mb-3"
+     role="navigation"
+     data-block="navigation"
+          aria-labelledby="instance-2144-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-2144-header" class="card-title d-inline">Navigation</h5>
+
+
+        <div class="card-text content mt-3">
+            <ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1"><p class="tree_item branch navigation_node" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca1861_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="https://betamoodle.iiitvadodara.ac.in/my/">Dashboard</a></p><ul id="random65f9d73bca1861_group" role="group"><li class="type_setting depth_2 item_with_icon" aria-labelledby="label_2_2"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_2_2" href="https://betamoodle.iiitvadodara.ac.in/?redirect=0"><i class="icon fa fa-home fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site home</span></a></p></li><li class="type_course depth_2 contains_branch" aria-labelledby="label_2_3"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random65f9d73bca1863_group"><span tabindex="-1" id="label_2_3" title="IIITV MOODLE">Site pages</span></p><ul id="random65f9d73bca1863_group" role="group" aria-hidden="true"><li class="type_unknown depth_3 item_with_icon" aria-labelledby="label_3_5"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_5" href="https://betamoodle.iiitvadodara.ac.in/blog/index.php"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site blogs</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_6"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_6" href="https://betamoodle.iiitvadodara.ac.in/badges/view.php?type=1"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site badges</span></a></p></li><li class="type_setting depth_3 item_with_icon" aria-labelledby="label_3_7"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_7" href="https://betamoodle.iiitvadodara.ac.in/tag/search.php"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Tags</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_8"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_8" href="https://betamoodle.iiitvadodara.ac.in/calendar/view.php?view=month&amp;course=515"><i class="icon fa fa-calendar fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Calendar</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_10"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_10" title="Forum" href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=327"><img class="icon navicon" alt="Forum" title="Forum" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/forum/1703149491/icon" /><span class="item-content-wrap">Site announcements</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_11"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca1869_group"><span tabindex="-1" id="label_2_11">My courses</span></p><ul id="random65f9d73bca1869_group" role="group"><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_12"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_474" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_474" data-node-key="474" data-node-type="20"><a tabindex="-1" id="label_3_12" title="Student Startup &amp; Innovation Policy" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=474">SSIP</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_13"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_489" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_489" data-node-key="489" data-node-type="20"><a tabindex="-1" id="label_3_13" title="Introduction to Edge computing_IT324_2023" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=489">IT324_2023</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_14"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_403" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_403" data-node-key="403" data-node-type="20"><a tabindex="-1" id="label_3_14" title="Information Theory Inference Learming_EC 312_old" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=403">EC 312 old</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_15"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_331" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_331" data-node-key="331" data-node-type="20"><a tabindex="-1" id="label_3_15" title="Spoken and Written Communication_HS101" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=331">HS 101</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_16"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_330" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_330" data-node-key="330" data-node-type="20"><a tabindex="-1" id="label_3_16" title="Basic Electronics Circuits Laboratory_EC160" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=330">EC 160</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_17"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_329" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_329" data-node-key="329" data-node-type="20"><a tabindex="-1" id="label_3_17" title="Basic Electronics Circuits_EC100" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=329">EC 100</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_18"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_328" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_328" data-node-key="328" data-node-type="20"><a tabindex="-1" id="label_3_18" title="Computer Programming and Problem Solving Laboratory_IT161" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=328">IT 161</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_19"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_326" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_326" data-node-key="326" data-node-type="20"><a tabindex="-1" id="label_3_19" title="Mechanics and Thermodynamics Lab_PH160" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=326">PH 160</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_20"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_325" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_325" data-node-key="325" data-node-type="20"><a tabindex="-1" id="label_3_20" title="Mechanics and Thermodynamics_PH100" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=325">Autumn 2021-22_PH 100</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_21"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_324" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_324" data-node-key="324" data-node-type="20"><a tabindex="-1" id="label_3_21" title="Mathematics-I (Linear Algebra and Matrices)_MA101" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=324">MA 101</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_29"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca18610_group"><a tabindex="-1" id="label_3_29" title=" Introduction to Cryptography and Network Security Laboratory_CS364_2024" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515">CS364_2024</a></p><ul id="random65f9d73bca18610_group" role="group"><li class="type_container depth_4 contains_branch" aria-labelledby="label_4_30"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random65f9d73bca18611_group"><a tabindex="-1" id="label_4_30" href="https://betamoodle.iiitvadodara.ac.in/user/index.php?id=515">Participants</a></p><ul id="random65f9d73bca18611_group" role="group" aria-hidden="true"><li class="type_setting depth_5 item_with_icon" aria-labelledby="label_5_31"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_31" href="https://betamoodle.iiitvadodara.ac.in/blog/index.php?courseid=515"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Course blogs</span></a></p></li><li class="type_user depth_5 item_with_icon" aria-labelledby="label_5_32"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_32" href="https://betamoodle.iiitvadodara.ac.in/user/view.php?id=1590&amp;course=515"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">SATYAM TRIPATHI</span></a></p></li></ul></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_33"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_33" href="https://betamoodle.iiitvadodara.ac.in/badges/view.php?type=2&amp;id=515"><i class="icon fa fa-shield fa-fw navicon"  title="Badges" aria-label="Badges"></i><span class="item-content-wrap">Badges</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_34"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_34" href="https://betamoodle.iiitvadodara.ac.in/admin/tool/lp/coursecompetencies.php?courseid=515"><i class="icon fa fa-check-square-o fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Competencies</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_35"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_35" href="https://betamoodle.iiitvadodara.ac.in/grade/report/index.php?id=515"><i class="icon fa fa-table fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Grades</span></a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_36"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca18617_group"><a tabindex="-1" id="label_4_36" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-0">General</a></p><ul id="random65f9d73bca18617_group" role="group"><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_37"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_37" title="Forum" href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=4409"><img class="icon navicon" alt="Forum" title="Forum" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/forum/1703149491/icon" /><span class="item-content-wrap">Announcements</span></a></p></li><li class="type_activity depth_5 item_with_icon current_branch" aria-labelledby="label_5_38"><p class="tree_item hasicon active_tree_node" role="treeitem"><a tabindex="-1" id="label_5_38" title="Quiz" href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/view.php?id=4421"><img class="icon navicon" alt="Quiz" title="Quiz" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/quiz/1703149491/icon" /><span class="item-content-wrap">LAB test</span></a></p></li></ul></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_39"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2328" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2328" data-node-key="2328" data-node-type="30"><a tabindex="-1" id="label_4_39" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-1">Topic 1</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_40"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2329" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2329" data-node-key="2329" data-node-type="30"><a tabindex="-1" id="label_4_40" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-2">Topic 2</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_41"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2330" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2330" data-node-key="2330" data-node-type="30"><a tabindex="-1" id="label_4_41" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-3">Topic 3</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_42"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2331" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2331" data-node-key="2331" data-node-type="30"><a tabindex="-1" id="label_4_42" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-4">Topic 4</a></p></li></ul></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_43"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_43" href="https://betamoodle.iiitvadodara.ac.in/my/"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">More...</span></a></p></li></ul></li></ul></li></ul>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span></aside>
+                </section>
+            </div>
+
+            <div class="columnright blockcolumn ">
+                <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
+                    <aside id="block-region-side-post" class="block-region" data-blockregion="side-post" data-droptarget="1"></aside>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div id="goto-top-link">
+        <a class="btn btn-light" role="button" href="#">
+            <i class="icon fa fa-arrow-up fa-fw "  title="Go to top" aria-label="Go to top"></i>
+        </a>
+    </div>
+    <footer id="page-footer" class="py-3 bg-dark text-light">
+        <div class="container">
+            <div id="course-footer"></div>
+    
+    
+            <div class="logininfo">You are logged in as <a href="https://betamoodle.iiitvadodara.ac.in/user/profile.php?id=1590" title="View profile">SATYAM TRIPATHI</a> (<a href="https://betamoodle.iiitvadodara.ac.in/login/logout.php?sesskey=KTTu9PHnPU">Log out</a>)</div>
+            <div class="tool_usertours-resettourcontainer"></div>
+            <div class="homelink"><a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515">CS364_2024</a></div>
+            <nav class="nav navbar-nav d-md-none" aria-label="Custom menu">
+                    <ul class="list-unstyled pt-3">
+                    </ul>
+            </nav>
+            <div class="tool_dataprivacy">Started on Friday, 11 March 2022, 2:30 PM</br>
+State Finished</br>
+Completed on Friday, 11 March 2022, 3:30 PM</br>
+Time taken 1 hour</br>
+Marks 22.00/32.00</br>
+Grade 27.50 out of 40.00 (69%)</br>
+Question 1</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 2</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Mid-Semester Exam_CS/IT 314_11-03-2022_2.30 PM to 3.30 PM</br>
+In the link design analysis the power received path loss is not a function of</br>
+a. Distance between the transmitter and receiver</br>
+b. Antenna Gain</br>
+c. None of these</br>
+d. Transmitter power</br>
+The correct answer is:</br>
+None of these</br>
+In a wireless communication channel, a change in frequency of a EM signal causes due to</br>
+a. Multipath effect</br>
+b. Shadowing</br>
+c. Reflection</br>
+d. Doppler shift</br>
+The correct answer is:</br>
+Doppler shift</br>
+Question 3</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 4</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 5</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+What is full form of UMTS?</br>
+a. Universal Mobile Telecommunication Server</br>
+b. Universal Mobile Telephonic System</br>
+c. Universal Mobile Telephonic Server</br>
+d. Universal Mobile Telecommunications System</br>
+The correct answer is:</br>
+Universal Mobile Telecommunications System</br>
+Among the following which is not a part of Base Station Subsystem (BSS)</br>
+a. Mobile Switching Centre (MSC)</br>
+b. Base Station Controller (BSC)</br>
+c. Base Transceiver Station (BTS)</br>
+d. Mobile Station (MS)</br>
+The correct answer is:</br>
+Mobile Switching Centre (MSC)</br>
+The frequency range of IEEE 802.11b standard is</br>
+a. 2.4 GHz</br>
+b. 5 Gbps</br>
+c. 5 GHz</br>
+d. 2.4 Gbps</br>
+The correct answer is:</br>
+2.4 GHz</br>
+Question 6</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 7</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Relation between system capacity (C) of a cellular system with frequency reuse factor (Q) and distance between co-channel cells (R)</br>
+a. R increases, Q increases and C increases</br>
+b. R increases, Q increases and C decreases</br>
+c. R decreases, Q increases and C increases</br>
+d. R increases, Q decreases and C increases</br>
+The correct answer is:</br>
+R increases, Q increases and C increases</br>
+A network of five mobile phones for data sharing is created using Bluetooth, what is the operating frequency of this network</br>
+a. 2.4 GHz</br>
+b. 5 GHz</br>
+c. None of these</br>
+d. 200 MHz</br>
+The correct answer is:</br>
+2.4 GHz</br>
+Question 8</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 9</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Among them which one is not a multicarrier modulation technique</br>
+a. GFDM (Generalized Frequency Division Multiplexing)</br>
+b. OFDM (Orthogonal Frequency Division Multiplexing)</br>
+c. None of these</br>
+d. CDMA (Code Division Multiple Access)</br>
+The correct answer is:</br>
+CDMA (Code Division Multiple Access)</br>
+a. 5.3 dB</br>
+b. 3.0 dB</br>
+c. 4.5 dB</br>
+d. 4.0 dB</br>
+The correct answer is:</br>
+3.0 dB</br>
+Question 10</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 11</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Which of the statement is incorrect among the following</br>
+a. The PCU (Packet Control Unit) in GPRS directs the circuit switched data to standard GSM network and packet switched data to GPRS</br>
+network.</br>
+b. The PCU (Packet Control Unit) in GPRS directs only the packet switched data to GPRS network.</br>
+c. None of these</br>
+d. The PCU (Packet Control Unit) in GPRS directs the circuit switched data to GPRS network and packet switched data to standard GSM</br>
+network.</br>
+The correct answer is:</br>
+The PCU (Packet Control Unit) in GPRS directs the circuit switched data to standard GSM network and packet switched data to GPRS network.</br>
+In the link design analysis, the received power is not a function of</br>
+a. Antenna gain</br>
+b. Path loss</br>
+c. Doppler shift</br>
+d. Transmitter power</br>
+The correct answer is:</br>
+Doppler shift</br>
+Question 12</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 13</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+The uplink and downlink frequency bands of cellular GSM system are</br>
+a. Uplink 1710-1785 MHz, Downlink 1805-1880 MHz</br>
+b. None of these</br>
+c. Uplink 890-915 MHz, Downlink 935-960 MHz</br>
+d. Uplink 935-960 MHz, Downlink 890-915 MHz</br>
+The correct answer is:</br>
+Uplink 890-915 MHz, Downlink 935-960 MHz</br>
+Which of the following statement is incorrect about microcell zone concept?</br>
+a. Reduced interference</br>
+b. No loss in trunking efficiency</br>
+c. More number of handoffs</br>
+d.</br>
+Increase in capacity</br>
+The correct answer is:</br>
+More number of handoffs</br>
+Question 14</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 15</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+a. 4200</br>
+b. 4400</br>
+c. 4800</br>
+d. None of these</br>
+The correct answer is:</br>
+4800</br>
+For a roaming user who is visiting a new MSC, the IMSI (International Mobile Subscriber Identity) will be temporarily stored in ………………</br>
+a. HLR (Home Location Register)</br>
+b. VLR (Visitor Location Register)</br>
+c. None of these</br>
+d. AUC (Authentication Center)</br>
+The correct answer is:</br>
+VLR (Visitor Location Register)</br>
+Question 16</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 17</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+The uplink and downlink frequency channels of GSM are separated by</br>
+a. 50 MHz</br>
+b. 25 MHz</br>
+c. 45 MHz</br>
+d. None of these</br>
+The correct answer is:</br>
+45 MHz</br>
+Which of the statement is incorrect among the following</br>
+a. UTMS networks has both circuit and packet switched element.</br>
+b. None of these</br>
+c. UTMS networks has a circuit switched element.</br>
+d. UTMS networks has a circuit switched element.</br>
+The correct answer is:</br>
+UTMS networks has both circuit and packet switched element.</br>
+Question 18</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 19</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Among the three basic modulation schemes which yields the minimum probability of error.</br>
+a. All of these have the same probability of error</br>
+b. BPSK (Binary Phase Shift Keying)</br>
+c. BFSK (Binary Frequency Shift Keying)</br>
+d. BASK (Binary Amplitude Shift Keying)</br>
+The correct answer is:</br>
+BPSK (Binary Phase Shift Keying)</br>
+GPRS (General Packet Radio Service) is an example of</br>
+a. 1 G</br>
+b. 2.5 G</br>
+c. 2 G</br>
+d. 3 G</br>
+The correct answer is:</br>
+2.5 G</br>
+Question 20</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 21</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Which of the following statement is incorrect</br>
+a. In OFDM (Orthogonal Frequency Division Multiplexing), the PARP (Peak to average power ratio) is less.</br>
+b. In OFDM (Orthogonal Frequency Division Multiplexing), the ICI (Inter-carrier-Interference) and ISI (Inter-Symbol-Interference) problem</br>
+is less.</br>
+c. None of these</br>
+d. OFDM (Orthogonal Frequency Division Multiplexing) provides a high spectral efficiency and data rate.</br>
+The correct answer is:</br>
+In OFDM (Orthogonal Frequency Division Multiplexing), the PARP (Peak to average power ratio) is less.</br>
+a. 4.58</br>
+b. 3.46</br>
+c. 5.75</br>
+d. 6.25</br>
+The correct answer is:</br>
+3.46</br>
+Question 22</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 23</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Among the following which is not a part of Network Switching Subsystem (NSS)</br>
+a. Authentication Center (AUC)</br>
+b. Mobile Switching Centre (MSC)</br>
+c. Base Transceiver Station (BTS)</br>
+d. Operation Support Subsystem (OSS)</br>
+The correct answer is:</br>
+Base Transceiver Station (BTS)</br>
+The number of sensor nodes in an Adhoc network is more than in a Wireless Sensor Network</br>
+a. False</br>
+b. True</br>
+The correct answer is:</br>
+False</br>
+Question 24</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 25</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Which of the following statement is incorrect?</br>
+a.</br>
+In soft handoff, the existing connection with the Base Station (BS) must be broken before establishing a connection with a new BS.</br>
+b.</br>
+In soft handoff, a new connection is established before the old one is released.</br>
+c.</br>
+In hard handoff, the existing connection with the Base Station (BS) must be broken before establishing a connection with a new BS.</br>
+d.</br>
+In hard handoff, the mobile unit simultaneously remain connected to more than one Base Station (BS).</br>
+The correct answer is:</br>
+In hard handoff, the mobile unit simultaneously remain connected to more than one Base Station (BS).</br>
+a. -24.53 dBm</br>
+b. +21.53 dBm</br>
+c. -21.53 dBm</br>
+d. +24.53 dBm</br>
+The correct answer is:</br>
+-21.53 dBm</br>
+Question 26</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 27</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 28</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+The Adhoc network is a centralized type of network</br>
+a. False</br>
+b. True</br>
+The correct answer is:</br>
+False</br>
+In OFDM (Orthogonal Frequency Division Multiplexing), a set of different subcarriers overlapping in frequency domain. However, these</br>
+subcarriers are</br>
+a.</br>
+b.</br>
+c.</br>
+d. None of these</br>
+The correct answer is:</br>
+If a user is in a voice call and also want to use his/her data connection uninterruptedly then which network will be preferred</br>
+a. LTE</br>
+b. VoLTE</br>
+c. None of these</br>
+The correct answer is:</br>
+VoLTE</br>
+Question 29</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 30</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+a. 4</br>
+b. 3</br>
+c. 5</br>
+d. 2</br>
+The correct answer is:</br>
+3</br>
+a. None of these</br>
+b. 1680</br>
+c. 1600</br>
+d. 1480</br>
+The correct answer is:</br>
+1680</br>
+Question 31</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 32</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+a. 4.59</br>
+b. 9.16</br>
+c. 7.75</br>
+d. 10.00</br>
+The correct answer is:</br>
+9.16</br>
+The relationship between coherence time and coherence bandwidth is</br>
+a.</br>
+b.</br>
+c.</br>
+d. None of these</br>
+The correct answer is:</br>
+◄ Quiz_Lab1_25.03.2022_4.25PM to 4.35 PM</br>
+Jump to...</br>
+Announcements ►</br>
+Started on Friday, 25 March 2022, 4:25 PM</br>
+State Finished</br>
+Completed on Friday, 25 March 2022, 4:33 PM</br>
+Time taken 8 mins 5 secs</br>
+Marks 3.00/5.00</br>
+Grade 6.00 out of 10.00 (60%)</br>
+Question 1</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Quiz_Lab1_25.03.2022_4.25PM to 4.35 PM</br>
+Which of the statement is wrong among the following</br>
+a. UTMS networks has a packet switched element.</br>
+b. None of these</br>
+c. UTMS networks has a circuit switched element.</br>
+d. UTMS networks has both circuit and packet switched element.</br>
+The correct answer is:</br>
+UTMS networks has both circuit and packet switched element.</br>
+Question 2</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 3</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+For a roaming user who is visiting a new MSC, the IMSI (International Mobile Subscriber Identity) will be temporarily stored in ………………</br>
+a. None of these</br>
+b. VLR (Visitor Location Register)</br>
+c. AUC (Authentication Center)</br>
+d. HLR (Home Location Register)</br>
+The correct answer is:</br>
+VLR (Visitor Location Register)</br>
+Which of the following statement is incorrect</br>
+a.</br>
+In soft handoff, the existing connection with the Base station (BS) must be broken before establishing a connection with a new BS</br>
+b.</br>
+In hard handoff, the mobile unit simultaneously remain connected to more than one Base station (BS).</br>
+c.</br>
+In hard handoff, the existing connection with the Base station (BS) must be broken before establishing a connection with a new BS</br>
+d.</br>
+In soft handoff, a new connection is established before the old one is released.</br>
+The correct answer is:</br>
+In hard handoff, the mobile unit simultaneously remain connected to more than one Base station (BS).</br>
+Question 4</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 5</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Which one is not a characteristics of a coherence bandwidth channel?</br>
+a. Nonlinear phase response</br>
+b. Linear phase response</br>
+c. Channel bandwidth is greater than the bandwidth of the transmitted signal</br>
+d. Equal gain over all frequencies</br>
+The correct answer is:</br>
+Nonlinear phase response</br>
+Which of the following statement is incorrect</br>
+a.</br>
+b.</br>
+c.</br>
+d.</br>
+The correct answer is:</br>
+◄ Quiz_Lab2_02.04.2022_12.10 PM to 12.20 PM</br>
+Jump to...</br>
+Mid-Semester Exam_CS/IT 314_11-03-2022_2.30 PM to 3.30 PM ►</br>
+Started on Saturday, 2 April 2022, 12:10 PM</br>
+State Finished</br>
+Completed on Saturday, 2 April 2022, 12:19 PM</br>
+Time taken 9 mins 29 secs</br>
+Marks 3.00/5.00</br>
+Grade 6.00 out of 10.00 (60%)</br>
+Question 1</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Quiz_Lab2_02.04.2022_12.10 PM to 12.20 PM</br>
+SS7 (Signalling System No. 7) protocol supports the interface between</br>
+a. BTS and BSC</br>
+b. BSC and MSC</br>
+c. MS and BTS</br>
+d. None of these</br>
+The correct answer is:</br>
+BSC and MSC</br>
+Question 2</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 3</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Which of the following statement is incorrect</br>
+a. OFDM (Orthogonal Frequency Division Multiplexing) provides a high spectral efficiency and data rate.</br>
+b. None of these</br>
+c.</br>
+In OFDM (Orthogonal Frequency Division Multiplexing), the PARP (Peak to average power ratio) is less.</br>
+d.</br>
+In OFDM (Orthogonal Frequency Division Multiplexing), the ICI (Inter-carrier-Interference) and ISI (Inter-Symbol-Interference) problem</br>
+is less.</br>
+The correct answer is:</br>
+In OFDM (Orthogonal Frequency Division Multiplexing), the PARP (Peak to average power ratio) is less.</br>
+Which one among the following statement is wrong</br>
+a.</br>
+In both circuit and packet switching networks, billing is based on the amount of transmitted data.</br>
+b. In packet switching network, billing is based on the amount of transmitted data.</br>
+c. In circuit switching network, billing is based on the duration of the connection.</br>
+d. GPRS is a packet switching network</br>
+The correct answer is:</br>
+In both circuit and packet switching networks, billing is based on the amount of transmitted data.</br>
+Question 4</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 5</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+The bandwidth of each ARFCN (Absolute Radio Frequency Channel Number) channel and number of subscriber supported by each channel is</br>
+a. None of these</br>
+b. 250 KHz, 8 users</br>
+c. 25 MHz, 6 users</br>
+d. 200 KHz, 8 users</br>
+The correct answer is:</br>
+200 KHz, 8 users</br>
+The uplink and downlink frequency channels of GSM are separated by</br>
+a. 25 MHz</br>
+b. 45 MHz</br>
+c. 50 MHz</br>
+d. None of these</br>
+The correct answer is:</br>
+45 MHz</br>
+◄ Quiz_Lab3_18.04.2022_12.35 PM to 12.40 PM</br>
+Jump to...</br>
+Quiz_Lab1_25.03.2022_4.25PM to 4.35 PM ►</br>
+Started on Thursday, 21 April 2022, 4:16 PM</br>
+State Finished</br>
+Completed on Thursday, 21 April 2022, 4:21 PM</br>
+Time taken 5 mins</br>
+Marks 4.00/5.00</br>
+Grade 8.00 out of 10.00 (80%)</br>
+Question 1</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 2</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Quiz_Lab4_21.04.2022_4.15 PM to 4.20 PM</br>
+Which layer in the protocol stack is targeted for jamming attack?</br>
+a. Application Layer</br>
+b. Transport Layer</br>
+c. MAC Layer</br>
+d. Network Layer</br>
+The correct answer is:</br>
+MAC Layer</br>
+The barcodes needs Line of Sight (LoS) communication to be scanned by the barcode reader?</br>
+a. True</br>
+b. False</br>
+The correct answer is:</br>
+True</br>
+Question 3</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 4</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 5</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Wireless networks are same as computer networks, that uses radio frequency channels as their _____________________________ for</br>
+communication.</br>
+a. CDMA</br>
+b. TDMA</br>
+c. Media access control</br>
+d. Physical media</br>
+The correct answer is:</br>
+Physical media</br>
+An Radio Frequency Identifier (RFID) reader, consists of how many components?</br>
+a. Two</br>
+b. One</br>
+c. Three</br>
+d. Four</br>
+The correct answer is:</br>
+Three</br>
+Which layer of the protocol stack is targeted for wormhole attack?</br>
+a. Transport Layer</br>
+b. MAC Layer</br>
+c. Network Layer</br>
+d. Application Layer</br>
+The correct answer is:</br>
+Network Layer</br>
+J</br>
+u</br>
+m</br>
+p</br>
+to... A</br>
+n</br>
+nou</br>
+n</br>
+c</br>
+e</br>
+m</br>
+e</br>
+n</br>
+t</br>
+s</br>
+►</br>
+Started on Thursday, 28 April 2022, 4:40 PM</br>
+State Finished</br>
+Completed on Thursday, 28 April 2022, 4:45 PM</br>
+Time taken 5 mins 1 sec</br>
+Marks 5.00/5.00</br>
+Grade 10.00 out of 10.00 (100%)</br>
+Question 1</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 2</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Quiz_Lab5_28.04.2022_4.40 PM to 4.45 PM</br>
+A transceiver module in a wireless sensor network contains which component internally?</br>
+a. Antennas</br>
+b. None of these</br>
+c. Electrodes</br>
+d. Wires</br>
+The correct answer is:</br>
+Antennas</br>
+Optical communication needs line of sight for communication between transmitter and receiver.</br>
+a. True</br>
+b. False</br>
+The correct answer is:</br>
+True</br>
+Question 3</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 4</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Sound Navigation and Ranging (SONAR) technology uses _____________________________ for communication.</br>
+a. LASER</br>
+b. Microwaves</br>
+c. Ultrasonic waves</br>
+d. Infrared waves</br>
+The correct answer is:</br>
+Ultrasonic waves</br>
+The major constraint in a mobile sensor network (MSN) ______</br>
+a. Bandwidth Management</br>
+b. Mobility Management</br>
+c. Power Management</br>
+d. Heterogeneity</br>
+The correct answer is:</br>
+Mobility Management</br>
+Question 5</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+SYN flooding is an __________________ layer attack.</br>
+a. Network</br>
+b. Transport</br>
+c. Data Link</br>
+d. Application</br>
+The correct answer is:</br>
+Transport</br>
+Jump to...</br>
+Announcements ►</br>
+Started on Monday, 2 May 2022, 1:00 PM</br>
+State Finished</br>
+Completed on Monday, 2 May 2022, 1:05 PM</br>
+Time taken 5 mins 1 sec</br>
+Marks 3.00/5.00</br>
+Grade 6.00 out of 10.00 (60%)</br>
+Question 1</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Question 2</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+Dashboard / Courses / Winter 2021-22 / BTech Semester 6 / Program Elective III / CS/IT314 / General</br>
+/ Quiz_Lab6_02.05.2022_1.00 PM to 1.05 PM</br>
+Which among them has the strongest wireless security?</br>
+a. WPA3 (Wi-Fi Protected Access 3)</br>
+b. WPA2 (Wi-Fi Protected Access 2)</br>
+c. WPA (Wi-Fi Protected Access)</br>
+d. WEP (Wireless Equivalent Privacy)</br>
+The correct answer is:</br>
+WPA3 (Wi-Fi Protected Access 3)</br>
+Among the following statements which one is incorrect</br>
+a. Cellular networks are based on distributed routing and Adhoc networks are based on centralized routing.</br>
+b. High cost and time of deployment (cellular network) and Quick and cost-effective deployment (MANET)</br>
+c. None of these</br>
+d. Cellular networks are based on reuse of frequency spectrum through geographical channel reuse</br>
+The correct answer is:</br>
+Cellular networks are based on distributed routing and Adhoc networks are based on centralized routing.</br>
+Question 3</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 4</br>
+Complete</br>
+Mark 0.00 out of 1.00</br>
+Question 5</br>
+Complete</br>
+Mark 1.00 out of 1.00</br>
+In a GPRS network, Serving GPRS Support Node is the equivalent of _________ system in GSM.</br>
+a. VLR</br>
+b. BSC</br>
+c. MSC</br>
+d. AuC</br>
+The correct answer is:</br>
+MSC</br>
+A universal Mobile Telecommunication System (UMTS) is a _______________ network.</br>
+a. 3G</br>
+b. 2.5G</br>
+c. 2G</br>
+d. 4G</br>
+The correct answer is:</br>
+3G</br>
+Universal Mobile Telecommunications System (UMTS) is based on ___________________ multiple access technique.</br>
+a. SDMA</br>
+b. TDMA</br>
+c. FDMA</br>
+d. CDMA</br>
+The correct answer is:</br>
+CDMA</br>
+Jump to...</br>
+p</br>
+A</br>
+n</br>
+nou</br>
+n</br>
+c</br>
+e</br>
+m</br>
+e</br>
+n</br>
+t</br>
+s</br>
+►</br></div>
+            <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://betamoodle.iiitvadodara.ac.in/lib/requirejs.php/1703149491/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/jquery/jquery-3.4.1.min',
+        jqueryui: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://betamoodle.iiitvadodara.ac.in/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('en', {
+  "Audio Player": "Audio Player",
+  "Video Player": "Video Player",
+  "Play": "Play",
+  "Pause": "Pause",
+  "Replay": "Replay",
+  "Current Time": "Current Time",
+  "Duration": "Duration",
+  "Remaining Time": "Remaining Time",
+  "Stream Type": "Stream Type",
+  "LIVE": "LIVE",
+  "Seek to live, currently behind live": "Seek to live, currently behind live",
+  "Seek to live, currently playing live": "Seek to live, currently playing live",
+  "Loaded": "Loaded",
+  "Progress": "Progress",
+  "Progress Bar": "Progress Bar",
+  "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+  "Fullscreen": "Fullscreen",
+  "Non-Fullscreen": "Non-Fullscreen",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Playback Rate": "Playback Rate",
+  "Subtitles": "Subtitles",
+  "subtitles off": "subtitles off",
+  "Captions": "Captions",
+  "captions off": "captions off",
+  "Chapters": "Chapters",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions off",
+  "Audio Track": "Audio Track",
+  "Volume Level": "Volume Level",
+  "You aborted the media playback": "You aborted the media playback",
+  "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+  "No compatible source was found for this media.": "No compatible source was found for this media.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+  "Play Video": "Play Video",
+  "Close": "Close",
+  "Close Modal Dialog": "Close Modal Dialog",
+  "Modal Window": "Modal Window",
+  "This is a modal window": "This is a modal window",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+  ", opens captions settings dialog": ", opens captions settings dialog",
+  ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+  ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+  ", selected": ", selected",
+  "captions settings": "captions settings",
+  "subtitles settings": "subtitles settings",
+  "descriptions settings": "descriptions settings",
+  "Text": "Text",
+  "White": "White",
+  "Black": "Black",
+  "Red": "Red",
+  "Green": "Green",
+  "Blue": "Blue",
+  "Yellow": "Yellow",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Background",
+  "Window": "Window",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-Transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Font Size",
+  "Text Edge Style": "Text Edge Style",
+  "None": "None",
+  "Raised": "Raised",
+  "Depressed": "Depressed",
+  "Uniform": "Uniform",
+  "Dropshadow": "Dropshadow",
+  "Font Family": "Font Family",
+  "Proportional Sans-Serif": "Proportional Sans-Serif",
+  "Monospace Sans-Serif": "Monospace Sans-Serif",
+  "Proportional Serif": "Proportional Serif",
+  "Monospace Serif": "Monospace Serif",
+  "Casual": "Casual",
+  "Script": "Script",
+  "Small Caps": "Small Caps",
+  "Reset": "Reset",
+  "restore all settings to the default values": "restore all settings to the default values",
+  "Done": "Done",
+  "Caption Settings Dialog": "Caption Settings Dialog",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+  "End of dialog window.": "End of dialog window.",
+  "{1} is loading.": "{1} is loading.",
+  "Exit Picture-in-Picture": "Exit Picture-in-Picture",
+  "Picture-in-Picture": "Picture-in-Picture"
+});
+
+    });
+});;
+M.util.js_pending('block_navigation/navblock'); require(['block_navigation/navblock'], function(amd) {amd.init("2144"); M.util.js_complete('block_navigation/navblock');});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("2145", null); M.util.js_complete('block_settings/settingsblock');});;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f65f9d73bca18633').submit();
+            });
+        });
+    ;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(28650, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","viewallcourses":"View all courses","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"});
+});
+ M.util.js_pending('random65f9d73bca18621'); Y.on('domready', function() { var activities = document.querySelectorAll('.section-cm-edit-actions div[role="menu"]');
+    if (activities) {
+        for (var i = 0; i < activities.length; i++) {
+            var ul = activities[i];
+            var owner = ul.parentNode.parentNode.parentNode.getAttribute('data-owner');
+            if (owner) {
+                var id = owner.replace(/^#module-/, '');
+                ul.insertAdjacentHTML('beforeend', "<a class=\"dropdown-item editing_notifications menu-action cm-edit-action\" data-action=\"notifications\" role=\"menuitem\" href=\"https:\/\/betamoodle.iiitvadodara.ac.in\/local\/resourcenotif\/resourcenotif.php?id=123XYZ321\" title=\"Notifications\"><i class=\"icon fa fa-envelope-o fa-fw \"  title=\"Notifications\" aria-label=\"Notifications\"><\/i><span class=\"menu-action-text\">Notifications<\/span><\/a>".replace('123XYZ321', id));
+            }
+        }
+    };  M.util.js_complete('random65f9d73bca18621'); });
+ M.util.js_pending('random65f9d73bca18622'); Y.on('domready', function() { var activities = document.querySelectorAll('.section-cm-edit-actions ul[role="menu"]');
+    if (activities) {
+        for (var i = 0; i < activities.length; i++) {
+            var ul = activities[i];
+            var owner = ul.parentNode.getAttribute('data-owner');
+            if (owner) {
+                var id = owner.replace(/^#module-/, '');
+                ul.insertAdjacentHTML('beforeend', "<li role=\"presentation\"><a class=\"dropdown-item editing_notifications menu-action cm-edit-action\" data-action=\"notifications\" role=\"menuitem\" href=\"https:\/\/betamoodle.iiitvadodara.ac.in\/local\/resourcenotif\/resourcenotif.php?id=123XYZ321\" title=\"Notifications\"><i class=\"icon fa fa-envelope-o fa-fw \"  title=\"Notifications\" aria-label=\"Notifications\"><\/i><span class=\"menu-action-text\">Notifications<\/span><\/a><\/li>".replace('123XYZ321', id));
+            }
+        }
+    };  M.util.js_complete('random65f9d73bca18622'); });
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random65f9d73bca18635'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random65f9d73bca18635'); });
+})();
+//]]>
+</script>
+
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
