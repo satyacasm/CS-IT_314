@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>Software and Cybersecurity_CS/IT445_2024</title>
+    <link rel="shortcut icon" href="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/theme/1703149491/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, CS364_2024: LAB test" />
+<link rel="stylesheet" type="text/css" href="https://betamoodle.iiitvadodara.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://betamoodle.iiitvadodara.ac.in/theme/styles.php/classic/1703149491_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/betamoodle.iiitvadodara.ac.in","sesskey":"KTTu9PHnPU","sessiontimeout":"28800","themerev":"1703149491","slasharguments":1,"theme":"classic","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1703149491","admin":"admin","svgicons":true," timezone":"Asia\/Kolkata","contextid":28650,"langrev":1703149491,"templaterev":"1703149491"};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?m\/1703149491\/","combine":true,"comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","ext":false,"root":"m\/1703149491\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_gps-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history- selector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_html-beautify":{},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/betamoodle.iiitvadodara.ac.in\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1703149491\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/javascript.php\/1703149491\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/betamoodle.iiitvadodara.ac.in\/lib\/javascript.php\/1703149491\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@2.7.8\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-mod-quiz-view" class="format-topics  path-mod path-mod-quiz chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam betamoodle-iiitvadodara-ac-in pagelayout-incourse course-515 context-28650 cmid-4421 category-84 ">
+
+<div id="page-wrapper" class="d-print-block">
+
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+</div><script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/babel-polyfill/polyfill.min.js"></script>
+<script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/polyfills/polyfill.js"></script>
+<script src="https://betamoodle.iiitvadodara.ac.in/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+
+    <nav class="fixed-top navbar navbar-bootswatch navbar-expand moodle-has-zindex">
+    
+            <a href="https://betamoodle.iiitvadodara.ac.in" class="navbar-brand aalink 
+                    d-none d-sm-inline
+                    ">
+                <span class="site-name d-none d-md-inline">MOODLE.IIITV.AC.IN</span>
+            </a>
+    
+            <ul class="navbar-nav d-none d-md-flex">
+                <!-- custom_menu -->
+                
+                <!-- page_heading_menu -->
+                
+            </ul>
+            <ul class="nav navbar-nav ml-auto">
+                <li class="d-none d-lg-block">
+                    
+                </li>
+                <!-- navbar_plugin_output -->
+                <li class="nav-item">
+                    <div class="popover-region collapsed popover-region-notifications"
+    id="nav-notification-popover-container" data- id="1590"
+    data-region="popover-region">
+    <div class="popover-region-toggle nav-link"
+        data-region="popover-region-toggle"
+        role="button"
+        aria-controls="popover-region-container-65f9d73bcb85b65f9d73bca18624"
+        aria-haspopup="true"
+        aria-label="Show notification window with no new notifications"
+        tabindex="0">
+                <i class="icon fa fa-bell fa-fw "  title="Toggle notifications menu" aria-label="Toggle notifications menu"></i>
+        <div class="count-container hidden" data-region="count-container"
+        aria-label="There are 0 unread notifications">0</div>
+
+    </div>
+    <div 
+        id="popover-region-container-65f9d73bcb85b65f9d73bca18624"
+        class="popover-region-container"
+        data-region="popover-region-container"
+        aria-expanded="false"
+        aria-hidden="true"
+        aria-label="Notification window"
+        role="region">
+        <div class="popover-region-header-container">
+            <h3 class="popover-region-header-text" data-region="popover-region-header-text">Notifications</h3>
+            <div class="popover-region-header-actions" data-region="popover-region-header-actions">        <a class="mark-all-read-button"
+           href="#"
+           title="Mark all as read"
+           data-action="mark-all-read"
+           role="button"
+           aria-label="Mark all as read">
+            <span class="normal-icon"><i class="icon fa fa-check fa-fw " aria-hidden="true"  ></i></span>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </a>
+        <a href="https://betamoodle.iiitvadodara.ac.in/message/notificationpreferences.php? id=1590"
+           title="Notification preferences"
+           aria-label="Notification preferences">
+            <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+        </a>
+</div>
+        </div>
+        <div class="popover-region-content-container" data-region="popover-region-content-container">
+            <div class="popover-region-content" data-region="popover-region-content">
+                        <div class="all-notifications"
+            data-region="all-notifications"
+            role="log"
+            aria-busy="false"
+            aria-atomic="false"
+            aria-relevant="additions"></div>
+        <div class="empty-message" tabindex="0" data-region="empty-message">You have no notifications</div>
+
+            </div>
+            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+        </div>
+                <a class="see-all-link"
+                    href="https://betamoodle.iiitvadodara.ac.in/message/output/popup/notifications.php">
+                    <div class="popover-region-footer-container">
+                        <div class="popover-region-seeall-text">See all</div>
+                    </div>
+                </a>
+    </div>
+</div>
+                </li>
+                <!--  _menu -->
+                <li class="nav-item d-flex align-items-center">
+                    <div class=" menu"><div class="action-menu moodle-actionmenu nowrap-items d-inline" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+
+        <div class="menubar d-flex " id="action-menu-0-menubar" role="menubar">
+
+            
+
+
+                <div class="action-menu-trigger">
+                    <div class="dropdown">
+                        <a href="#" tabindex="0" class="d-inline-block  dropdown-toggle icon-no-margin" id="action-menu-toggle-0" aria-label="  menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-controls="action-menu-0-menu">
+                            
+                            <span class=" button"><span class=" text mr-1"> </span><span class="avatars"><span class="avatar current"><img src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/core/1703149491/u/f2" class=" picture default pic" width="35" height="35" aria-hidden="true" /></span></span></span>
+                                
+                            <b class="caret"></b>
+                        </a>
+                            <div class="dropdown-menu dropdown-menu-right menu  align-tr-br" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu" data-align="tr-br">
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/my/" class="dropdown-item menu-action" role="menuitem" data-title="mymoodle,admin" aria-labelledby="actionmenuaction-1">
+                                                <i class="icon fa fa-tachometer fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-1">
+                                                Dashboard
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/ /profile.php?id=1590" class="dropdown-item menu-action" role="menuitem" data-title="profile,moodle" aria-labelledby="actionmenuaction-2">
+                                                <i class="icon fa fa-  fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-2">
+                                                Profile
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/grade/report/overview/index.php" class="dropdown-item menu-action" role="menuitem" data-title="grades,grades" aria-labelledby="actionmenuaction-3">
+                                                <i class="icon fa fa-table fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-3">
+                                                Grades
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/message/index.php" class="dropdown-item menu-action" role="menuitem" data-title="messages,message" aria-labelledby="actionmenuaction-4">
+                                                <i class="icon fa fa-comment fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-4">
+                                                Messages
+                                            </span>
+                                        </a>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/ /preferences.php" class="dropdown-item menu-action" role="menuitem" data-title="preferences,moodle" aria-labelledby="actionmenuaction-5">
+                                                <i class="icon fa fa-wrench fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-5">
+                                                Preferences
+                                            </span>
+                                        </a>
+                                        <div class="dropdown-divider" role="presentation"><span class="filler">&nbsp;</span></div>
+                                        <a href="https://betamoodle.iiitvadodara.ac.in/login/logout.php?sesskey=KTTu9PHnPU" class="dropdown-item menu-action" role="menuitem" data-title="logout,moodle" aria-labelledby="actionmenuaction-6">
+                                                <i class="icon fa fa-sign-out fa-fw " aria-hidden="true"  ></i>
+                                            <span class="menu-action-text" id="actionmenuaction-6">
+                                                Log out
+                                            </span>
+                                        </a>
+                            </div>
+                    </div>
+                </div>
+
+        </div>
+
+</div></div>
+                </li>
+            </ul>
+            <!-- search_box -->
+    </nav>
+    
+
+    <div id="page" class="container-fluid d-print-block">
+        <header id="page-header" class="row">
+    <div class="col-12 pt-3 pb-3">
+        <div class="card ">
+            <div class="card-body ">
+                <div class="d-flex align-items-center">
+                    <div class="mr-auto">
+                    <div class="page-context-header"><div class="page-header-headings"><h1> Software and Cybersecurity_CS/IT445_2024</h1></div></div>
+                    </div>
+                    <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
+                    </div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div id="page-navbar">
+                        <nav aria-label="Navigation bar">
+    <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/my/"  >Dashboard</a>
+                </li>
+        
+                <li class="breadcrumb-item">My courses</li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=5"  title=" Software and Cybersecurity_CS/IT445_2024">CS445_2024</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-0"  >General</a>
+                </li>
+        
+                <li class="breadcrumb-item">
+                    <a href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/view.php?id=4421" aria-current="page" title="Quiz">M</a>
+                </li>
+        </ol>
+</nav>
+                    </div>
+                    <div class="ml-auto d-flex">
+                        
+                    </div>
+                    <div id="course-header">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div id="page-content" class="row  blocks-pre   d-print-block">
+            <div id="region-main-box" class="region-main">
+                <section id="region-main" class="region-main-content" aria-label="Content">
+                    <span class="notifications" id=" -notifications"></span>
+                    <div role="main"><span id="maincontent"></span><h2>LAB test</h2><div id="intro" class="box py-3 generalbox"><div class="no-overflow"><p dir="ltr" style="text-align: left;">Free navigation is not allowed.</p></div></div><div class="box py-3 quizinfo"><p>Attempts allowed: 1</p>
+<p>This quiz closed on Friday, 6 October 2024, 2:50 PM</p>
+<p>Time limit: 20 mins</p>
+</div><h3>Summary of your previous attempts</h3><table class="generaltable quizattemptsummary">
+<thead>
+<tr>
+<th class="header c0" style="text-align:left;" scope="col">State</th>
+<th class="header c1" style="text-align:center;" scope="col">Grade / 9.00</th>
+<th class="header c2 lastcol" style="text-align:center;" scope="col">Review</th>
+</tr>
+</thead>
+<tbody><tr class="lastrow">
+<td class="cell c0" style="text-align:left;">Finished<span class="statedetails">Submitted Friday, 6 October 2024, 2:50 PM</span></td>
+<td class="cell c1" style="text-align:center;">3.00</td>
+<td class="cell c2 lastcol" style="text-align:center;"><a title="Review your responses to this attempt" href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/review.php?">Review</a></td>
+</tr>
+</tbody>
+</table>
+<div id="feedback" class="box py-3 generalbox"><h3>Your final grade for this quiz is 3.00/9.00.</h3></div><div class="box py-3 quizattempt"><p>No more attempts are allowed</p>
+<div class="continuebutton">
+    <form method="get" action="https://betamoodle.iiitvadodara.ac.in/course/view.php" >
+            <input type="hidden" name="id" value="515">
+        <button type="submit" class="btn btn-secondary"
+            id="single_button65f9d73bca18634"
+            title=""
+            
+            >Back to the course</button>
+    </form>
+</div></div></div>
+                    <div class="mt-5 mb-1 activity-navigation container-fluid">
+<div class="row">
+    <div class="col-md-4">        <div class="float-left">
+                <a href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=4409&forceview=1" id="prev-activity-link" class="btn btn-link"  title="Announcements" >&#x25C4; Announcements</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://betamoodle.iiitvadodara.ac.in/course/jumpto.php" class="form-inline" id="url_select_f65f9d73bca18633">
+        <input type="hidden" name="sesskey" value="KTTu9PHnPU">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=4409&amp;forceview=1" >Announcements</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary ml-1" value="Go">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="float-right">
+            
+        </div>
+</div>
+</div>
+</div>
+                    
+                </section>
+            </div>
+            <div class="columnleft blockcolumn  has-blocks ">
+                <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
+                    <aside id="block-region-side-pre" class="block-region" data-blockregion="side-pre" data-droptarget="1"><a href="#sb-1" class="sr-only sr-only-focusable">Skip Navigation</a>
+
+<section id="inst2144"
+     class=" block_navigation block  card mb-3"
+     role="navigation"
+     data-block="navigation"
+          aria-labelledby="instance-2144-header"
+     >
+
+    <div class="card-body p-3">
+
+            <h5 id="instance-2144-header" class="card-title d-inline">Navigation</h5>
+
+
+        <div class="card-text content mt-3">
+            <ul class="block_tree list" role="tree" data-ajax-loader="block_navigation/nav_loader"><li class="type_unknown depth_1 contains_branch" aria-labelledby="label_1_1"><p class="tree_item branch navigation_node" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca1861_group" data-collapsible="false"><a tabindex="-1" id="label_1_1" href="https://betamoodle.iiitvadodara.ac.in/my/">Dashboard</a></p><ul id="random65f9d73bca1861_group" role="group"><li class="type_setting depth_2 item_with_icon" aria-labelledby="label_2_2"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_2_2" href="https://betamoodle.iiitvadodara.ac.in/?redirect=0"><i class="icon fa fa-home fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site home</span></a></p></li><li class="type_course depth_2 contains_branch" aria-labelledby="label_2_3"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random65f9d73bca1863_group"><span tabindex="-1" id="label_2_3" title="IIITV MOODLE">Site pages</span></p><ul id="random65f9d73bca1863_group" role="group" aria-hidden="true"><li class="type_unknown depth_3 item_with_icon" aria-labelledby="label_3_5"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_5" href="https://betamoodle.iiitvadodara.ac.in/blog/index.php"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site blogs</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_6"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_6" href="https://betamoodle.iiitvadodara.ac.in/badges/view.php?type=1"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Site badges</span></a></p></li><li class="type_setting depth_3 item_with_icon" aria-labelledby="label_3_7"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_7" href="https://betamoodle.iiitvadodara.ac.in/tag/search.php"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Tags</span></a></p></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_8"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_8" href="https://betamoodle.iiitvadodara.ac.in/calendar/view.php?view=month&amp;course=515"><i class="icon fa fa-calendar fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Calendar</span></a></p></li><li class="type_activity depth_3 item_with_icon" aria-labelledby="label_3_10"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_10" title="Forum" href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=327"><img class="icon navicon" alt="Forum" title="Forum" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/forum/1703149491/icon" /><span class="item-content-wrap">Site announcements</span></a></p></li></ul></li><li class="type_system depth_2 contains_branch" aria-labelledby="label_2_11"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca1869_group"><span tabindex="-1" id="label_2_11">My courses</span></p><ul id="random65f9d73bca1869_group" role="group"><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_12"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_474" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_474" data-node-key="474" data-node-type="20"><a tabindex="-1" id="label_3_12" title="Student Startup &amp; Innovation Policy" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=474">SSIP</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_13"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_489" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_489" data-node-key="489" data-node-type="20"><a tabindex="-1" id="label_3_13" title="Introduction to Edge computing_IT324_2023" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=489">IT324_2023</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_14"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_403" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_403" data-node-key="403" data-node-type="20"><a tabindex="-1" id="label_3_14" title="Information Theory Inference Learming_EC 312_old" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=403">EC 312 old</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_15"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_331" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_331" data-node-key="331" data-node-type="20"><a tabindex="-1" id="label_3_15" title="Spoken and Written Communication_HS101" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=331">HS 101</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_16"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_330" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_330" data-node-key="330" data-node-type="20"><a tabindex="-1" id="label_3_16" title="Basic Electronics Circuits Laboratory_EC160" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=330">EC 160</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_17"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_329" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_329" data-node-key="329" data-node-type="20"><a tabindex="-1" id="label_3_17" title="Basic Electronics Circuits_EC100" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=329">EC 100</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_18"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_328" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_328" data-node-key="328" data-node-type="20"><a tabindex="-1" id="label_3_18" title="Computer Programming and Problem Solving Laboratory_IT161" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=328">IT 161</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_19"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_326" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_326" data-node-key="326" data-node-type="20"><a tabindex="-1" id="label_3_19" title="Mechanics and Thermodynamics Lab_PH160" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=326">PH 160</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_20"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_325" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_325" data-node-key="325" data-node-type="20"><a tabindex="-1" id="label_3_20" title="Mechanics and Thermodynamics_PH100" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=325">Autumn 2021-22_PH 100</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_21"><p class="tree_item branch" role="treeitem" id="expandable_branch_20_324" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_20_324" data-node-key="324" data-node-type="20"><a tabindex="-1" id="label_3_21" title="Mathematics-I (Linear Algebra and Matrices)_MA101" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=324">MA 101</a></p></li><li class="type_course depth_3 contains_branch" aria-labelledby="label_3_29"><p class="tree_item branch canexpand" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca18610_group"><a tabindex="-1" id="label_3_29" title=" Introduction to Cryptography and Network Security Laboratory_CS364_2024" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515">CS364_2024</a></p><ul id="random65f9d73bca18610_group" role="group"><li class="type_container depth_4 contains_branch" aria-labelledby="label_4_30"><p class="tree_item branch" role="treeitem" aria-expanded="false" aria-owns="random65f9d73bca18611_group"><a tabindex="-1" id="label_4_30" href="https://betamoodle.iiitvadodara.ac.in/ /index.php?id=515">Participants</a></p><ul id="random65f9d73bca18611_group" role="group" aria-hidden="true"><li class="type_setting depth_5 item_with_icon" aria-labelledby="label_5_31"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_31" href="https://betamoodle.iiitvadodara.ac.in/blog/index.php?courseid=515"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Course blogs</span></a></p></li><li class="type_  depth_5 item_with_icon" aria-labelledby="label_5_32"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_32" href="https://betamoodle.iiitvadodara.ac.in/ /view.php?id=1590&amp;course=515"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">   </span></a></p></li></ul></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_33"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_33" href="https://betamoodle.iiitvadodara.ac.in/badges/view.php?type=2&amp;id=515"><i class="icon fa fa-shield fa-fw navicon"  title="Badges" aria-label="Badges"></i><span class="item-content-wrap">Badges</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_34"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_34" href="https://betamoodle.iiitvadodara.ac.in/admin/tool/lp/coursecompetencies.php?courseid=515"><i class="icon fa fa-check-square-o fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Competencies</span></a></p></li><li class="type_setting depth_4 item_with_icon" aria-labelledby="label_4_35"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_4_35" href="https://betamoodle.iiitvadodara.ac.in/grade/report/index.php?id=515"><i class="icon fa fa-table fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">Grades</span></a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_36"><p class="tree_item branch" role="treeitem" aria-expanded="true" aria-owns="random65f9d73bca18617_group"><a tabindex="-1" id="label_4_36" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-0">General</a></p><ul id="random65f9d73bca18617_group" role="group"><li class="type_activity depth_5 item_with_icon" aria-labelledby="label_5_37"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_5_37" title="Forum" href="https://betamoodle.iiitvadodara.ac.in/mod/forum/view.php?id=4409"><img class="icon navicon" alt="Forum" title="Forum" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/forum/1703149491/icon" /><span class="item-content-wrap">Announcements</span></a></p></li><li class="type_activity depth_5 item_with_icon current_branch" aria-labelledby="label_5_38"><p class="tree_item hasicon active_tree_node" role="treeitem"><a tabindex="-1" id="label_5_38" title="Quiz" href="https://betamoodle.iiitvadodara.ac.in/mod/quiz/view.php?id=4421"><img class="icon navicon" alt="Quiz" title="Quiz" src="https://betamoodle.iiitvadodara.ac.in/theme/image.php/classic/quiz/1703149491/icon" /><span class="item-content-wrap">LAB test</span></a></p></li></ul></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_39"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2328" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2328" data-node-key="2328" data-node-type="30"><a tabindex="-1" id="label_4_39" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-1">Topic 1</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_40"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2329" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2329" data-node-key="2329" data-node-type="30"><a tabindex="-1" id="label_4_40" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-2">Topic 2</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_41"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2330" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2330" data-node-key="2330" data-node-type="30"><a tabindex="-1" id="label_4_41" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-3">Topic 3</a></p></li><li class="type_structure depth_4 contains_branch" aria-labelledby="label_4_42"><p class="tree_item branch" role="treeitem" id="expandable_branch_30_2331" aria-expanded="false" data-requires-ajax="true" data-loaded="false" data-node-id="expandable_branch_30_2331" data-node-key="2331" data-node-type="30"><a tabindex="-1" id="label_4_42" href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515#section-4">Topic 4</a></p></li></ul></li><li class="type_custom depth_3 item_with_icon" aria-labelledby="label_3_43"><p class="tree_item hasicon" role="treeitem"><a tabindex="-1" id="label_3_43" href="https://betamoodle.iiitvadodara.ac.in/my/"><i class="icon fa fa-fw fa-fw navicon" aria-hidden="true"  ></i><span class="item-content-wrap">More...</span></a></p></li></ul></li></ul></li></ul>
+            <div class="footer"></div>
+            
+        </div>
+
+    </div>
+
+</section>
+
+  <span id="sb-1"></span></aside>
+                </section>
+            </div>
+
+            <div class="columnright blockcolumn ">
+                <section data-region="blocks-column" class="d-print-none" aria-label="Blocks">
+                    <aside id="block-region-side-post" class="block-region" data-blockregion="side-post" data-droptarget="1"></aside>
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <div id="goto-top-link">
+        <a class="btn btn-light" role="button" href="#">
+            <i class="icon fa fa-arrow-up fa-fw "  title="Go to top" aria-label="Go to top"></i>
+        </a>
+    </div>
+    <footer id="page-footer" class="py-3 bg-dark text-light">
+        <div class="container">
+            <div id="course-footer"></div>
+    
+    
+            <div class="logininfo">You are logged in as <a href="https://betamoodle.iiitvadodara.ac.in/" title="View profile">   </a> (<a href="https://betamoodle.iiitvadodara.ac.in/login">Log out</a>)</div>
+            <div class="tool_ tours-resettourcontainer"></div>
+            <div class="homelink"><a href="https://betamoodle.iiitvadodara.ac.in/course/view.php?id=515">CS445_2024</a></div>
+            <nav class="nav navbar-nav d-md-none" aria-label="Custom menu">
+                    <ul class="list-unstyled pt-3">
+                    </ul>
+            </nav>
+            <div class="tool_dataprivacy">Started on Friday, 11 March 2022, 2:30 PM</br>
+                
+                <a href="https://smallpdf.com/file#s=79001d9f-1877-4477-a803-3aea0ed766a0"> link</a>
+</br></div>
+            <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://betamoodle.iiitvadodara.ac.in/lib/requirejs.php/1703149491/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/jquery/jquery-3.4.1.min',
+        jqueryui: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://betamoodle.iiitvadodara.ac.in/lib/javascript.php/1703149491/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");require(['core/first'], function() {
+require(['core/prefetch']);
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://betamoodle.iiitvadodara.ac.in/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage('en', {
+  "Audio Player": "Audio Player",
+  "Video Player": "Video Player",
+  "Play": "Play",
+  "Pause": "Pause",
+  "Replay": "Replay",
+  "Current Time": "Current Time",
+  "Duration": "Duration",
+  "Remaining Time": "Remaining Time",
+  "Stream Type": "Stream Type",
+  "LIVE": "LIVE",
+  "Seek to live, currently behind live": "Seek to live, currently behind live",
+  "Seek to live, currently playing live": "Seek to live, currently playing live",
+  "Loaded": "Loaded",
+  "Progress": "Progress",
+  "Progress Bar": "Progress Bar",
+  "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+  "Fullscreen": "Fullscreen",
+  "Non-Fullscreen": "Non-Fullscreen",
+  "Mute": "Mute",
+  "Unmute": "Unmute",
+  "Playback Rate": "Playback Rate",
+  "Subtitles": "Subtitles",
+  "subtitles off": "subtitles off",
+  "Captions": "Captions",
+  "captions off": "captions off",
+  "Chapters": "Chapters",
+  "Descriptions": "Descriptions",
+  "descriptions off": "descriptions off",
+  "Audio Track": "Audio Track",
+  "Volume Level": "Volume Level",
+  "You aborted the media playback": "You aborted the media playback",
+  "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+  "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+  "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+  "No compatible source was found for this media.": "No compatible source was found for this media.",
+  "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+  "Play Video": "Play Video",
+  "Close": "Close",
+  "Close Modal Dialog": "Close Modal Dialog",
+  "Modal Window": "Modal Window",
+  "This is a modal window": "This is a modal window",
+  "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+  ", opens captions settings dialog": ", opens captions settings dialog",
+  ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+  ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+  ", selected": ", selected",
+  "captions settings": "captions settings",
+  "subtitles settings": "subtitles settings",
+  "descriptions settings": "descriptions settings",
+  "Text": "Text",
+  "White": "White",
+  "Black": "Black",
+  "Red": "Red",
+  "Green": "Green",
+  "Blue": "Blue",
+  "Yellow": "Yellow",
+  "Magenta": "Magenta",
+  "Cyan": "Cyan",
+  "Background": "Background",
+  "Window": "Window",
+  "Transparent": "Transparent",
+  "Semi-Transparent": "Semi-Transparent",
+  "Opaque": "Opaque",
+  "Font Size": "Font Size",
+  "Text Edge Style": "Text Edge Style",
+  "None": "None",
+  "Raised": "Raised",
+  "Depressed": "Depressed",
+  "Uniform": "Uniform",
+  "Dropshadow": "Dropshadow",
+  "Font Family": "Font Family",
+  "Proportional Sans-Serif": "Proportional Sans-Serif",
+  "Monospace Sans-Serif": "Monospace Sans-Serif",
+  "Proportional Serif": "Proportional Serif",
+  "Monospace Serif": "Monospace Serif",
+  "Casual": "Casual",
+  "Script": "Script",
+  "Small Caps": "Small Caps",
+  "Reset": "Reset",
+  "restore all settings to the default values": "restore all settings to the default values",
+  "Done": "Done",
+  "Caption Settings Dialog": "Caption Settings Dialog",
+  "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+  "End of dialog window.": "End of dialog window.",
+  "{1} is loading.": "{1} is loading.",
+  "Exit Picture-in-Picture": "Exit Picture-in-Picture",
+  "Picture-in-Picture": "Picture-in-Picture"
+});
+
+    });
+});;
+M.util.js_pending('block_navigation/navblock'); require(['block_navigation/navblock'], function(amd) {amd.init("2144"); M.util.js_complete('block_navigation/navblock');});;
+M.util.js_pending('block_settings/settingsblock'); require(['block_settings/settingsblock'], function(amd) {amd.init("2145", null); M.util.js_complete('block_settings/settingsblock');});;
+
+require(['jquery', 'message_popup/notification_popover_controller'], function($, controller) {
+    var container = $('#nav-notification-popover-container');
+    var controller = new controller(container);
+    controller.registerEventListeners();
+    controller.registerListNavigationEventListeners();
+});
+;
+
+        require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+            CustomEvents.define('#jump-to-activity', [CustomEvents.events.accessibleChange]);
+            $('#jump-to-activity').on(CustomEvents.events.accessibleChange, function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f65f9d73bca18633').submit();
+            });
+        });
+    ;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
+});
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(28650, [], true); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","viewallcourses":"View all courses","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error","file":"File","url":"URL"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"},"debug":{"debuginfo":"Debug info","line":"Line","stacktrace":"Stack trace"},"langconfig":{"labelsep":": "}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"MathJax.Hub.Config({\r\n    config: [\"Accessible.js\", \"Safe.js\"],\r\n    errorSettings: { message: [\"!\"] },\r\n    skipStartupTypeset: true,\r\n    messageStyle: \"none\"\r\n});\r\n","lang":"en"});
+});
+ M.util.js_pending('random65f9d73bca18621'); Y.on('domready', function() { var activities = document.querySelectorAll('.section-cm-edit-actions div[role="menu"]');
+    if (activities) {
+        for (var i = 0; i < activities.length; i++) {
+            var ul = activities[i];
+            var owner = ul.parentNode.parentNode.parentNode.getAttribute('data-owner');
+            if (owner) {
+                var id = owner.replace(/^#module-/, '');
+                ul.insertAdjacentHTML('beforeend', "<a class=\"dropdown-item editing_notifications menu-action cm-edit-action\" data-action=\"notifications\" role=\"menuitem\" href=\"https:\/\/betamoodle.iiitvadodara.ac.in\/local\/resourcenotif\/resourcenotif.php?id=123XYZ321\" title=\"Notifications\"><i class=\"icon fa fa-envelope-o fa-fw \"  title=\"Notifications\" aria-label=\"Notifications\"><\/i><span class=\"menu-action-text\">Notifications<\/span><\/a>".replace('123XYZ321', id));
+            }
+        }
+    };  M.util.js_complete('random65f9d73bca18621'); });
+ M.util.js_pending('random65f9d73bca18622'); Y.on('domready', function() { var activities = document.querySelectorAll('.section-cm-edit-actions ul[role="menu"]');
+    if (activities) {
+        for (var i = 0; i < activities.length; i++) {
+            var ul = activities[i];
+            var owner = ul.parentNode.getAttribute('data-owner');
+            if (owner) {
+                var id = owner.replace(/^#module-/, '');
+                ul.insertAdjacentHTML('beforeend', "<li role=\"presentation\"><a class=\"dropdown-item editing_notifications menu-action cm-edit-action\" data-action=\"notifications\" role=\"menuitem\" href=\"https:\/\/betamoodle.iiitvadodara.ac.in\/local\/resourcenotif\/resourcenotif.php?id=123XYZ321\" title=\"Notifications\"><i class=\"icon fa fa-envelope-o fa-fw \"  title=\"Notifications\" aria-label=\"Notifications\"><\/i><span class=\"menu-action-text\">Notifications<\/span><\/a><\/li>".replace('123XYZ321', id));
+            }
+        }
+    };  M.util.js_complete('random65f9d73bca18622'); });
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random65f9d73bca18635'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random65f9d73bca18635'); });
+})();
+//]]>
+</script>
+
+        </div>
+      <div>
+        How can annotations be used as test oracles in security testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+Annotations are used for code coverage criteria.</br>
+</br>
+</br>
+b.</br>
+Annotations guide test case generation automatically.</br>
+</br>
+</br>
+c.</br>
+Annotations provide a test oracle for free.</br>
+</br>
+</br>
+d.</br>
+Annotations prevent security flaws in software.</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. Annotations provide a test oracle for free.</br>
+</br>
+Annotations can serve as test oracles in security testing by embedding metadata that helps verify whether the software meets certain security requirements. This approach can simplify the process of checking expected behavior against actual outcomes without needing additional manual effort.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is the role of a test oracle in system testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+B) To define the test suite</br>
+</br>
+</br>
+b.</br>
+D) To decide the location of security flaws</br>
+</br>
+</br>
+c.</br>
+C) To verify the correctness of the SUT's response</br>
+</br>
+</br>
+d.</br>
+A) To generate test cases</br>
+</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. To verify the correctness of the SUT's (System Under Test) response</br>
+</br>
+A test oracle is used to determine whether the outcomes of tests are correct by comparing the actual results with expected results. This helps in verifying the correctness of the system’s behavior during testing.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Why is it said that "crashes are good" in the context of fuzzing?</br>
+</br>
+</br>
+</br>
+a.</br>
+c. Crashes reveal memory corruption or other issues.</br>
+</br>
+</br>
+b.</br>
+b. Crashes are easy to analyze.</br>
+</br>
+</br>
+c.</br>
+a. Crashes indicate correct program behavior.</br>
+</br>
+</br>
+d.</br>
+d. A method for generating random inputs</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+a. Crashes reveal memory corruption or other issues.</br>
+</br>
+In the context of fuzzing, crashes are often seen as beneficial because they can indicate serious issues like memory corruption, buffer overflows, or other vulnerabilities. These crashes provide valuable information about flaws in the software that need to be addressed to improve security and reliability.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Why can even simple input languages cause security problems?</br>
+</br>
+</br>
+</br>
+a.</br>
+C) They rely on character sets and encodings that can lead to issues.</br>
+</br>
+</br>
+b.</br>
+B) They are easy to validate and sanitize.</br>
+</br>
+</br>
+c.</br>
+D) They do not impact software security.</br>
+</br>
+</br>
+d.</br>
+A) They always conform to security standards.</br>
+</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+a. They rely on character sets and encodings that can lead to issues.</br>
+</br>
+Even simple input languages can cause security problems because character sets and encodings may introduce vulnerabilities, such as encoding-related bypasses, injection attacks, or misinterpretations of data. These issues arise if input handling does not properly account for all variations and encodings, potentially leading to security flaws.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+In security testing, what is the main role of abuse cases?</br>
+</br>
+</br>
+</br>
+a.</br>
+To validate functional correctness.</br>
+</br>
+</br>
+b.</br>
+To identify potential security threats.</br>
+</br>
+</br>
+c.</br>
+To maximize code coverage criteria.</br>
+</br>
+</br>
+d.</br>
+To ensure all users are treated fairly.</br>
+</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+b. To identify potential security threats.</br>
+</br>
+In security testing, abuse cases are designed to simulate malicious or unintended use of the system to identify potential security threats. They help testers understand how an application might be misused and reveal vulnerabilities that could be exploited by attackers.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Quiz5</br>
+</br>
+</br>
+How does fuzzing differ from normal functional testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+Fuzzing focuses on security flaws, while functional testing focuses on correct behavior.</br>
+</br>
+</br>
+b.</br>
+Fuzzing generates random inputs, while functional testing uses predefined test cases.</br>
+</br>
+</br>
+c.</br>
+Fuzzing relies on manual testing, while functional testing uses automated tools.</br>
+</br>
+</br>
+d.</br>
+Fuzzing is easier to implement than functional testing.</br>
+</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+b. Fuzzing generates random inputs, while functional testing uses predefined test cases.</br>
+</br>
+Fuzzing differs from normal functional testing by generating random, unexpected, or malformed inputs to test how the system responds to abnormal conditions, often exposing hidden vulnerabilities. In contrast, functional testing typically uses predefined, structured test cases to verify that the software behaves as expected.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Which type of fuzzing generates inputs based on a description of the input format or protocol?</br>
+</br>
+</br>
+</br>
+a.</br>
+A) Mutational fuzzing</br>
+</br>
+</br>
+b.</br>
+D) Whitebox fuzzing</br>
+</br>
+</br>
+c.</br>
+B) Generation-based fuzzing</br>
+</br>
+</br>
+d.</br>
+C) Grammar-based fuzzing</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. B) Generation-based fuzzing</br>
+</br>
+Generation-based fuzzing creates inputs based on a detailed description of the input format or protocol, typically using a specification, grammar, or model to generate valid and malformed inputs to test the system.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Which type of testing focuses on finding wrong, undesired behavior for unusual inputs?</br>
+</br>
+</br>
+</br>
+a.</br>
+b. Static analysis</br>
+</br>
+</br>
+b.</br>
+a. Normal (functional) testing</br>
+</br>
+</br>
+c.</br>
+c. Security testing</br>
+</br>
+</br>
+d.</br>
+d. Dynamic analysis</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. Security testing</br>
+</br>
+Security testing focuses on identifying wrong or undesired behavior in a system, especially for unusual, unexpected, or malicious inputs that could expose vulnerabilities or weaknesses in the system's security. It often includes testing for input validation issues, buffer overflows, and other potential exploits.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What kind of bugs is generational fuzzing particularly effective at identifying?</br>
+</br>
+</br>
+</br>
+a.</br>
+D) Memory corruption bugs</br>
+</br>
+</br>
+b.</br>
+C) Deep bugs</br>
+</br>
+</br>
+c.</br>
+A) Shallow bugs</br>
+</br>
+</br>
+d.</br>
+B) Functional bugs</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+a. D) Memory corruption bugs</br>
+</br>
+Generation-based fuzzing is particularly effective at identifying memory corruption bugs, such as buffer overflows or use-after-free errors. This is because it generates inputs that are specifically crafted to trigger memory-related vulnerabilities, making it easier to spot issues that may lead to security flaws or crashes.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Why is fuzzing a valuable technique in security testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+C) Fuzzing is easy to implement with minimal effort.</br>
+</br>
+</br>
+b.</br>
+D) Fuzzing helps identify security flaws with random input generation.</br>
+</br>
+</br>
+c.</br>
+A) Fuzzing finds deep bugs in software.</br>
+</br>
+</br>
+d.</br>
+B) Fuzzing generates correct and secure inputs.</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+b. D) Fuzzing helps identify security flaws with random input generation.</br>
+</br>
+Fuzzing is valuable in security testing because it helps identify security flaws by generating random or malformed inputs that can uncover vulnerabilities such as buffer overflows, memory corruption, and other issues that may not be easily detected through traditional testing methods.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What did Google's Project Zero discover by fuzzing fonts in the Windows kernel?</br>
+</br>
+</br>
+</br>
+a.</br>
+Verabilities in text rendering algorithms</br>
+</br>
+</br>
+b.</br>
+Secure font handling practices</br>
+</br>
+</br>
+c.</br>
+Improved font rendering performance</br>
+</br>
+</br>
+d.</br>
+The need for more font styles</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+a. Vulnerabilities in text rendering algorithms</br>
+</br>
+Google's Project Zero discovered critical security vulnerabilities in the Windows kernel by fuzzing fonts. These vulnerabilities were related to flaws in text rendering algorithms, which could potentially lead to security issues such as remote code execution or privilege escalation.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is the primary advantage of generation-based fuzzing in security testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+D) It is effective for identifying memory corruption bugs.</br>
+</br>
+</br>
+b.</br>
+A) It requires less effort to implement.</br>
+</br>
+</br>
+c.</br>
+C) It generates inputs based on the input format or protocol.</br>
+</br>
+</br>
+d.</br>
+B) It identifies shallow bugs in the software.</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. C) It generates inputs based on the input format or protocol.</br>
+</br>
+The primary advantage of generation-based fuzzing is that it generates inputs based on a detailed description of the input format or protocol. This allows it to produce both valid and malformed inputs that are more likely to expose issues related to specific formats, protocols, or application behavior.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+In generational fuzzing, what types of inputs are generated?</br>
+</br>
+</br>
+</br>
+a.</br>
+Grammar-based inputs</br>
+</br>
+</br>
+b.</br>
+Completely blank inputs</br>
+</br>
+</br>
+c.</br>
+Mutated inputs</br>
+</br>
+</br>
+d.</br>
+Random inputs</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+a. Grammar-based inputs</br>
+</br>
+In generational fuzzing, inputs are generated based on a specification or grammar that describes the input format. These inputs can be both valid and malformed, but they are constructed in a way that adheres to the expected structure of the input, making them more effective at uncovering specific types of vulnerabilities related to the format or protocol.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is a test oracle in the context of security testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+a. A tool for generating test cases</br>
+</br>
+</br>
+b.</br>
+d. A method for generating random inputs</br>
+</br>
+</br>
+c.</br>
+c. A mechanism for deciding if the system behaves as desired</br>
+</br>
+</br>
+d.</br>
+b. A framework for defining input data</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+c. A mechanism for deciding if the system behaves as desired</br>
+</br>
+In security testing, a test oracle is a mechanism or method used to determine whether the system's behavior is correct and secure. It helps compare the actual output of the system to the expected output, identifying potential security issues or deviations from desired behavior.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is the main challenge in security testing, as compared to normal functional testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+a. Lack of suitable test cases</br>
+</br>
+</br>
+b.</br>
+b. Difficulty in defining test oracles</br>
+</br>
+</br>
+c.</br>
+d. Finding compliant users</br>
+</br>
+</br>
+d.</br>
+c. Identifying obscure bugs</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+b. Difficulty in defining test oracles</br>
+</br>
+In security testing, the main challenge is often defining test oracles, which are mechanisms to verify whether the system behaves as expected under various attack scenarios. Unlike functional testing, where expected behavior is clearly defined, security testing involves identifying potential vulnerabilities and ensuring that the system securely handles malicious or unexpected inputs, making it harder to define correct outcomes.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+Which code coverage criteria measures how well a test suite covers branches in the code?</br>
+</br>
+</br>
+</br>
+a.</br>
+c. MCDC coverage</br>
+</br>
+</br>
+b.</br>
+a. Statement coverage</br>
+</br>
+</br>
+c.</br>
+d. Code coverage metrics</br>
+</br>
+</br>
+d.</br>
+b. Branch coverage</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+d. b. Branch coverage</br>
+</br>
+Branch coverage measures how well a test suite covers the branches in the code, ensuring that each decision point (e.g., if/else conditions) has been tested for both true and false outcomes. This helps in identifying untested parts of the code that could contain bugs or vulnerabilities.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is the Security Testing Paradox?</br>
+</br>
+</br>
+</br>
+a.</br>
+C) A paradox that states security testing is easier than functional testing</br>
+</br>
+</br>
+b.</br>
+A) A paradox in cryptography</br>
+</br>
+</br>
+c.</br>
+B) A paradox in software development</br>
+</br>
+</br>
+d.</br>
+D) A paradox that claims security testing is harder than functional testing</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+d. D) A paradox that claims security testing is harder than functional testing</br>
+</br>
+The Security Testing Paradox refers to the idea that security testing is often harder and more complex than functional testing. While functional testing typically focuses on ensuring that the software works as intended under normal conditions, security testing deals with unexpected, malicious inputs and attack scenarios, making it more difficult to define expected outcomes and test for all potential vulnerabilities.</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+You said:</br>
+What is the purpose of code coverage criteria in software testing?</br>
+</br>
+</br>
+</br>
+a.</br>
+D) To automatically generate test cases.</br>
+</br>
+</br>
+b.</br>
+A) To ensure all code is completely bug-free.</br>
+</br>
+</br>
+c.</br>
+C) To define a test oracle for security testing.</br>
+</br>
+</br>
+d.</br>
+B) To measure how good a test suite is in terms of statement and branch coverage.</br>
+ChatGPT said:</br>
+ChatGPT</br>
+The correct answer is:</br>
+</br>
+d. B) To measure how good a test suite is in terms of statement and branch coverage.</br>
+</br>
+Code coverage criteria are used in software testing to measure the effectiveness of a test suite by assessing how much of the code has been exercised during testing. It helps identify areas of the code that have not been tested, such as specific statements or branches, and provides insight into the thoroughness of the testing process. While it does not guarantee that all bugs will be found, it helps in improving test quality and ensuring that all parts of the software are adequately tested.</br>
+      </div>
+    </footer>
+</div>
+
+</body>
+</html>
